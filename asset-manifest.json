@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/git%20/static/css/main.e84612d0.css",
+    "main.js": "/git%20/static/js/main.62f063a0.js",
+    "static/media/coding-pov.png": "/git%20/static/media/coding-pov.6cf58d2bf6bf6a6592b9.png",
+    "static/media/mountain-1.png": "/git%20/static/media/mountain-1.7a9a004b11161cd3bf9c.png",
+    "static/media/speak-my-words.png": "/git%20/static/media/speak-my-words.e044fb4b819018d8a105.png",
+    "static/media/chapter-chatter.png": "/git%20/static/media/chapter-chatter.f8d623e62a315559f0fc.png",
+    "static/media/tech-corner.png": "/git%20/static/media/tech-corner.9df64c047d2564a25427.png",
+    "static/media/MSA.png": "/git%20/static/media/MSA.7130b37876d863ab678d.png",
+    "static/media/planets.png": "/git%20/static/media/planets.3371a15ebbb1b789f498.png",
+    "static/media/Resume.pdf": "/git%20/static/media/Resume.4a6d32fccd3221238eb1.pdf",
+    "static/media/home-main.svg": "/git%20/static/media/home-main.4e9d7f2b27cd8341ac063135ad161a15.svg",
+    "static/media/note-taker.png": "/git%20/static/media/note-taker.681beecf40c749992eb5.png",
+    "static/media/JATE.png": "/git%20/static/media/JATE.a46771a3176173823278.png",
+    "static/media/grid.png": "/git%20/static/media/grid.a1b9a72f33d42ca318c7.png",
+    "index.html": "/git%20/index.html",
+    "static/media/menu.svg": "/git%20/static/media/menu.e0dad08a2622ba1001c331bbcf62ccf6.svg",
+    "static/media/close.svg": "/git%20/static/media/close.f4ddc10baff7c4ddb06b070c10133ed2.svg",
+    "main.e84612d0.css.map": "/git%20/static/css/main.e84612d0.css.map",
+    "main.62f063a0.js.map": "/git%20/static/js/main.62f063a0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e84612d0.css",
+    "static/js/main.62f063a0.js"
+  ]
+}
