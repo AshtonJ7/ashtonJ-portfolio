@@ -1,0 +1,236 @@
+/* HEADER */
+
+.home-wrapper {
+  position: relative;
+  background-image: url('../Assets/mountain-1.png');
+  background-size: cover;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  z-index: 1;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 4rem 1rem;
+}
+
+.home-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 100%;
+  background-image: url('../Assets/planets.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top right;
+  opacity: 0.3;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Typography */
+.heading {
+  font-size: clamp(3rem, 8vw, 6rem);
+}
+
+.cover-name, .wave-name {
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  line-height: 1.2;
+}
+
+.heading-name {
+  font-size: clamp(3rem, 8vw, 6rem);
+}
+
+.header-color {
+  color:  #6366f1;
+}
+
+/* Image responsiveness */
+.image-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.cover {
+  max-width: 100%;
+  height: auto;
+  max-height: min(50vh, 400px);
+  object-fit: contain;
+  animation-name: cover;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+/* Text alignment */
+.typewriter-container {
+  text-align: left;
+  margin-top: 1rem;
+}
+
+/* Wave animation */
+.wave {
+  animation-name: wave-animation;
+  animation-duration: 2.1s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+  60% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* Cover image animation */
+@keyframes cover {
+  0% { transform: translate(0, 0px); }
+  50% { transform: translate(0, 15px); }
+  100% { transform: translate(0, 0px); }
+}
+
+/* Typewriter styles */
+.Typewriter__wrapper {
+  font-size: clamp(1.2rem, 3vw, 2.2rem) !important;
+  font-weight: 600 !important;
+}
+
+.Typewriter__cursor {
+  font-size: clamp(1.4rem, 3.2vw, 2.4rem) !important;
+}
+
+/* CTA Buttons */
+.cta {
+  justify-content: center;
+  display: flex;
+}
+
+
+.cta-about, .cta-portfolio {
+  width: clamp(120px, 30vw, 150px);
+  height: clamp(40px, 10vw, 50px);
+  font-size: clamp(14px, 2.5vw, 16px);
+  cursor: pointer;
+
+}
+
+.cta-about {
+   margin-right: 1rem;
+  border: 2px solid var(--dark);
+  background: transparent;
+  color: var(--dark);
+}
+
+.cta-portfolio {
+  background: var(--dark);
+  border: 2px solid var(--dark);
+  color: white;
+  margin-right: 1rem;
+}
+
+
+
+/* Responsive breakpoints */
+
+/* Large screens */
+@media (min-width: 992px) {
+  .home-wrapper {
+    padding: 4rem 2rem;
+  }
+  
+  .intro-text {
+    padding-right: 2rem;
+  }
+}
+
+/* Medium screens */
+@media (max-width: 991px) and (min-width: 768px) {
+  .home-wrapper {
+    padding: 3rem 1.5rem;
+  }
+  
+  .cover {
+    max-height: 40vh;
+  }
+  
+  .typewriter-container {
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+}
+
+/* Small screens */
+@media (max-width: 767px) {
+  .home-wrapper {
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+  
+  .home-wrapper::before {
+    width: 60%;
+    opacity: 0.2;
+  }
+  
+  .intro-text {
+    margin-top: 2rem;
+  }
+  
+  .cover {
+    max-height: 35vh;
+    margin: 0;
+  }
+  
+  .cta {
+    padding-top: 2rem;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .cta-about, .cta-portfolio {
+    width: 80%;
+    max-width: 200px;
+  }
+  
+  .typewriter-container {
+    text-align: center;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 575px) {
+  .home-wrapper {
+    padding: 1.5rem 0.75rem;
+    min-height: 100vh;
+  }
+  
+  .cover-name, .wave-name {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  
+  .cover {
+    max-height: 30vh;
+  }
+  
+  .home-wrapper::before {
+    display: none; /* Hide decorative background on very small screens */
+  }
+  
+  .Typewriter__wrapper {
+    font-size: clamp(1rem, 4vw, 1.5rem) !important;
+  }
+  
+  .Typewriter__cursor {
+    font-size: clamp(1.1rem, 4.2vw, 1.6rem) !important;
+  }
+}

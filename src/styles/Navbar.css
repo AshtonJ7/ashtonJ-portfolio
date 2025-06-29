@@ -1,0 +1,132 @@
+
+
+.navbar {
+  will-change: transform;
+  padding: 3rem 2rem;
+  font-size: 1.2rem;
+  background-color: #030412; /* Or your preferred color */
+         cursor: pointer;
+ color: white;
+  }
+
+
+.navbar a,
+.nav-links a {
+  float: right;
+  font-size: 22px;
+  color: white !important;
+  padding: 4px 20px;
+  text-decoration: none;
+  text-align: right;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar a:hover,
+.nav-links a:hover {
+  background-color: white;
+  color: #030412 !important;
+}
+
+/* Mobile menu toggle button */
+.mobile-menu-toggle {
+ display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+}
+
+.mobile-menu-toggle.open .bar:nth-child(1) {
+  transform: translateY(5px) rotate(45deg);
+}
+
+.mobile-menu-toggle.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-toggle.open .bar:nth-child(3) {
+  transform: translateY(-5px) rotate(-45deg);
+}
+
+/* Media query for responsive design */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem 2rem; /* Reduce padding on mobile */
+  }
+  
+  .mobile-menu-toggle {
+    display: flex;
+    position: relative;
+    z-index: 1001;
+  }
+
+  /* Hide nav links by default on mobile */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #030412;
+    border: 1px solid #1a1a2e;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-width: 200px;
+    z-index: 1000;
+  }
+
+  /* Show nav links when menu is open */
+  .nav-links.open {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .nav-links a {
+    float: none; /* Remove float on mobile */
+    display: block;
+    padding: 12px 20px;
+    margin: 0;
+    font-size: 18px;
+    text-align: left;
+    border-bottom: 1px solid #1a1a2e;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .nav-links a:last-child {
+    border-bottom: none;
+  }
+
+  .nav-links a:hover {
+    background-color: #1a1a2e;
+    color: white !important;
+  }
+}
+
+/* Tablet styles */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .navbar {
+    padding: 2rem 1.5rem;
+  }
+  
+  .navbar a,
+  .nav-links a {
+    font-size: 20px;
+    padding: 4px 15px;
+  }
+}
+
+/* Large desktop styles */
+@media (min-width: 1200px) {
+  .navbar {
+    padding: 3rem 4rem;
+  }
+  
+  .navbar a,
+  .nav-links a {
+    font-size: 24px;
+    padding: 6px 24px;
+  }
+}

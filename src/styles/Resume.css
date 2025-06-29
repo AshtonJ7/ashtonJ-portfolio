@@ -1,0 +1,20 @@
+.resume-section {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.CV {
+    height: 30px;
+}
+
+.pdf-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.react-pdf__Page {
+  display: flex;
+  justify-content: center;
+}
