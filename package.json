@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/AshtonJ7/ashtonJ-portfolio",
+  "homepage": "git ",
   "dependencies": {
     "@formcarry/react": "^1.0.4",
     "@formspree/react": "^2.5.1",
